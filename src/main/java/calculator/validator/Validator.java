@@ -52,7 +52,7 @@ public class Validator {
 
     public static Integer parseIntSafely(String numberString) {
         try {
-            return Integer.parseInt(numberString.trim());
+            return Integer.parseInt(numberString);
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException("'" + numberString + "'는 유효한 값이 아닙니다.");
         }
