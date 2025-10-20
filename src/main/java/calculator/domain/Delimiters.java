@@ -1,7 +1,8 @@
 package calculator.domain;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -11,8 +12,9 @@ public class Delimiters {
     private static final String BASIC_DELIMITER_COMMA = ",";
     private static final String BASIC_DELIMITER_COLON = ":";
 
-    private final List<String> delimiters = new ArrayList<>(List.of(BASIC_DELIMITER_COMMA, BASIC_DELIMITER_COLON));
+    private final Set<String> delimiters = new HashSet<>(List.of(BASIC_DELIMITER_COMMA, BASIC_DELIMITER_COLON));
     private final String inputText;
+
 
     private Delimiters(String inputText) {
         this.inputText = inputText;
