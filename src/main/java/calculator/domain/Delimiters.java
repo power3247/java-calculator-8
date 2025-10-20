@@ -25,6 +25,8 @@ public class Delimiters {
     }
 
     private void setCustomDelimiter() {
+        String customDelimiter = extractCustomDelimiter();
+        delimiters.add(customDelimiter);
     }
 
     private String extractCustomDelimiter() {
