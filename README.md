@@ -12,9 +12,8 @@
   - [x] 구분자 리스트를 정규식 형태로 반환하는 기능 Delimiters.getRegex()
     - [x] 입력받은 문자열에서 커스텀 구분자 추출 Delimiters.extractCustomDelimiter()
   - [x] 커스텀 구분자를 저장한 리스트 Delimiters.delimiters
-- [ ] 사용자가 잘못된 값을 입력할 경우 IllegalArgumentException을 발생시킨 후 애플리케이션은 종료되어야 한다.
-  - [ ] 올바른 값인지 체크
-  - [ ] 잘못된 값 정의 (값의 정의)
+- [ ] 사용자가 잘못된 값을 입력할 경우 IllegalArgumentException을 발생시킨 후 애플리케이션은 종료되어야 한다. Validator
+  - [x] 사용자 입력자체가 빈 문자열이나 공백인경우 Validator.validateInputTextEmpty()
 - [x] 입출력
   - [x] 입력
   - [x] 출력

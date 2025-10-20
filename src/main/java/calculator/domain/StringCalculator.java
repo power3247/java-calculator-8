@@ -1,5 +1,7 @@
 package calculator.domain;
 
+import calculator.validator.Validator;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -9,6 +11,8 @@ public class StringCalculator {
     private static final String CUSTOM_DELIMITER_SUFFIX = "\\n";
 
     public int add(String inputText) {
+        Validator.validateInputTextEmpty(inputText);
+
         Delimiters delimiters = Delimiters.createDelimiters(inputText);
 
         String[] stringNumbers = splitNumbers(inputText, delimiters);
