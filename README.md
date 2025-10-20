@@ -7,7 +7,7 @@
     - [ ] 숫자의 합을 구하기 StringCalculator.sum()
 - [ ] 앞의 기본 구분자(쉼표, 콜론) 외에 커스텀 구분자를 지정할 수 있다. 
 커스텀 구분자는 문자열 앞부분의 "//"와 "\n" 사이에 위치하는 문자를 커스텀 구분자로 사용한다. Delimiters
-  - [ ] 입력받은 문자열을 커스텀 구분자 부분과, 합할 숫자 부분을 나누기 StringCalculator.extractNumbersText()
+  - [x] 입력받은 문자열을 커스텀 구분자 부분과, 합할 숫자 부분을 나누기 StringCalculator.extractNumbersText()
   - [ ] 입력받은 문자열 앞부분 에서 "//"와 "\n" 사이의 문자(커스텀 구분자) 파악및 저장 Delimiters.findCustomDelimiter()
   - [ ] 커스텀 구분자를 쉼표와 콜론과 함께 구분자가 저장된 자료구조에 저장 Delimiters.delimiters[]
 - [ ] 사용자가 잘못된 값을 입력할 경우 IllegalArgumentException을 발생시킨 후 애플리케이션은 종료되어야 한다.
