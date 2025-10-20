@@ -1,6 +1,7 @@
 package calculator.domain;
 
 import calculator.validator.Validator;
+import static calculator.domain.ParsingConstants.*;
 
 import java.util.HashSet;
 import java.util.List;
@@ -9,8 +10,6 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class Delimiters {
-    private static final String CUSTOM_DELIMITER_PREFIX = "//";
-    private static final String CUSTOM_DELIMITER_SUFFIX = "\\n";
     private static final String BASIC_DELIMITER_COMMA = ",";
     private static final String BASIC_DELIMITER_COLON = ":";
 

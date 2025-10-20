@@ -2,9 +2,9 @@ package calculator.validator;
 
 import java.util.List;
 
+import static calculator.domain.ParsingConstants.*;
+
 public class Validator {
-    private static final String CUSTOM_DELIMITER_PREFIX = "//";
-    private static final String CUSTOM_DELIMITER_SUFFIX = "\\n";
 
     private Validator() {
     }
