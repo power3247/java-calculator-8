@@ -37,4 +37,10 @@ public class Validator {
         }
     }
 
+    public static void validateDelimiterNotEmpty(String delimiter) {
+        if (delimiter.isEmpty()) {
+            throw new IllegalArgumentException("커스텀 구분자는 빈 문자열일 수 없습니다.");
+        }
+    }
+
 }

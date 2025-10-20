@@ -33,6 +33,7 @@ public class Delimiters {
 
     private void setCustomDelimiter() {
         String customDelimiter = extractCustomDelimiter();
+        Validator.validateDelimiterNotEmpty(customDelimiter);
         delimiters.add(customDelimiter);
     }
 
