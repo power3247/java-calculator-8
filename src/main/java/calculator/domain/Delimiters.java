@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class Delimiters {
     private static final String CUSTOM_DELIMITER_PREFIX = "//";
-    private static final String CUSTOM_DELIMITER_SUFFIX = "\n";
+    private static final String CUSTOM_DELIMITER_SUFFIX = "\\n";
     private static final String BASIC_DELIMITER_COMMA = ",";
     private static final String BASIC_DELIMITER_COLON = ":";
 

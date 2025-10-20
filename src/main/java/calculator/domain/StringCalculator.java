@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class StringCalculator {
     private static final String CUSTOM_DELIMITER_PREFIX = "//";
-    private static final String CUSTOM_DELIMITER_SUFFIX = "\n";
+    private static final String CUSTOM_DELIMITER_SUFFIX = "\\n";
 
     public int add(String inputText) {
         Delimiters delimiters = Delimiters.createDelimiters(inputText);
@@ -25,8 +25,8 @@ public class StringCalculator {
 
     private String extractNumbersText(String inputText) {
         if (inputText.startsWith(CUSTOM_DELIMITER_PREFIX)) {
-            int suffixIndex = inputText.indexOf(CUSTOM_DELIMITER_SUFFIX);
-            return inputText.substring(suffixIndex + 1);
+            int suffixIndex = inputText.indexOf(CUSTOM_DELIMITER_SUFFIX) + CUSTOM_DELIMITER_SUFFIX.length();
+            return inputText.substring(suffixIndex);
         }
         return inputText;
     }
