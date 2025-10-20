@@ -17,6 +17,7 @@ public class StringCalculator {
 
         String[] stringNumbers = splitNumbers(inputText, delimiters);
         List<Integer> numbers = parseNumbers(stringNumbers);
+        Validator.validateNegativeNumbers(numbers);
 
         return sum(numbers);
     }
