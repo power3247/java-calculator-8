@@ -36,6 +36,7 @@ public class StringCalculator {
     }
 
     private List<Integer> parseNumbers(String[] stringNumbers) {
+        Validator.validateNoEmptyElement(stringNumbers);
         return Arrays.stream(stringNumbers)
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
