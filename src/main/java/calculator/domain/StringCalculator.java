@@ -11,7 +11,7 @@ import static calculator.domain.ParsingConstants.CUSTOM_DELIMITER_SUFFIX;
 
 public class StringCalculator {
 
-    public int add(String inputText) {
+    public Long add(String inputText) {
         Validator.validateInputTextEmpty(inputText);
 
         Delimiters delimiters = Delimiters.createDelimiters(inputText);
@@ -46,8 +46,8 @@ public class StringCalculator {
     }
 
 
-    private int sum(List<Integer> numbers) {
-        return numbers.stream().mapToInt(Integer::intValue).sum();
+    private long sum(List<Integer> numbers) {
+        return numbers.stream().mapToLong(Integer::longValue).sum();
     }
 
 
