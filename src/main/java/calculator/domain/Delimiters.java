@@ -34,6 +34,7 @@ public class Delimiters {
     private void setCustomDelimiter() {
         String customDelimiter = extractCustomDelimiter();
         Validator.validateDelimiterNotEmpty(customDelimiter);
+        Validator.validateDelimiterHasNoNumbers(customDelimiter);
         delimiters.add(customDelimiter);
     }
 

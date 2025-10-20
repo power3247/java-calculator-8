@@ -43,4 +43,10 @@ public class Validator {
         }
     }
 
+    public static void validateDelimiterHasNoNumbers(String delimiter) {
+        if (delimiter.matches(".*[0-9].*")) {
+            throw new IllegalArgumentException("커스텀 구분자에는 숫자를 포함할 수 없습니다: " + delimiter);
+        }
+    }
+
 }
