@@ -18,7 +18,8 @@
   - [x] 더해질 숫자 요소가 음수인경우 Validator.validateNegativeNumbers()
   - [x] 커스텀 구분자 형식 검증 Validator.validateCustomDelimiterFormat()
   - [x] 커스텀 구분자가 빈 문자열인지 검증 Validator.validateDelimiterNotEmpty()
-  - [x] 커스텀 구분자가 숫자가 아닌지 검증 Validator.validateDelimiterHasNoNumbers()
+  - [x] 커스텀 구분자가 숫자가 아닌지 검증 Validator.validateDelimiterHasNoNumbers() 
+  - [x] 숫자 요소가 정수값인지 검증후 변환  Validator.parseIntSafely()
 - [x] 입출력
   - [x] 입력
   - [x] 출력

@@ -38,10 +38,12 @@ public class StringCalculator {
 
     private List<Integer> parseNumbers(String[] stringNumbers) {
         Validator.validateNoEmptyElement(stringNumbers);
+
         return Arrays.stream(stringNumbers)
-                .map(Integer::parseInt)
+                .map(Validator::parseIntSafely)
                 .collect(Collectors.toList());
     }
+
 
     private int sum(List<Integer> numbers) {
         return numbers.stream().mapToInt(Integer::intValue).sum();
