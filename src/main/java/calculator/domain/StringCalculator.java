@@ -21,7 +21,11 @@ public class StringCalculator {
         return extractedNumbersText.split(regex);
     }
     private String extractNumbersText(String inputText) {
-        return "";
+        if (inputText.startsWith(CUSTOM_DELIMITER_PREFIX)) {
+            int suffixIndex = inputText.indexOf(CUSTOM_DELIMITER_SUFFIX);
+            return inputText.substring(suffixIndex + 1);
+        }
+        return inputText;
     }
     private List<Integer> parseNumbers(String[] stringNumbers) {
         return null;
