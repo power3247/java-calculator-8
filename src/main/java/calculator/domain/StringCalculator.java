@@ -35,7 +35,6 @@ public class StringCalculator {
                 .collect(Collectors.toList());
         return numbers;
     }
-
     private int sum(List<Integer> numbers) {
         return numbers.stream().mapToInt(Integer::intValue).sum();
     }
