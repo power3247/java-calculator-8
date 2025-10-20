@@ -1,5 +1,7 @@
 package calculator.domain;
 
+import calculator.validator.Validator;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -17,6 +19,7 @@ public class Delimiters {
 
 
     private Delimiters(String inputText) {
+        Validator.validateCustomDelimiterFormat(inputText);
         this.inputText = inputText;
     }
 

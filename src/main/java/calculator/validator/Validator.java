@@ -3,6 +3,8 @@ package calculator.validator;
 import java.util.List;
 
 public class Validator {
+    private static final String CUSTOM_DELIMITER_PREFIX = "//";
+    private static final String CUSTOM_DELIMITER_SUFFIX = "\\n";
 
     private Validator() {
     }
@@ -26,6 +28,12 @@ public class Validator {
             if (number < 0) {
                 throw new IllegalArgumentException("음수는 허용되지 않습니다");
             }
+        }
+    }
+
+    public static void validateCustomDelimiterFormat(String inputText) {
+        if (inputText.startsWith(CUSTOM_DELIMITER_PREFIX) && !inputText.contains(CUSTOM_DELIMITER_SUFFIX)) {
+            throw new IllegalArgumentException("커스텀 구분자 형식 오류: '//' 다음에는 '\\n'이 와야 합니다.");
         }
     }
 

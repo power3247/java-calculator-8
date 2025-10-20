@@ -16,6 +16,7 @@
   - [x] 사용자 입력자체가 빈 문자열이나 공백인경우 Validator.validateInputTextEmpty()
   - [x] 더해질 숫자 요소가 공백인경우 Validator.validateInputTextEmpty()
   - [x] 더해질 숫자 요소가 음수인경우 Validator.validateNegativeNumbers()
+  - [x] 커스텀 구분자 형식 검증 Validator.validateCustomDelimiterFormat()
 - [x] 입출력
   - [x] 입력
   - [x] 출력
