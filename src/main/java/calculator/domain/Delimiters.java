@@ -8,14 +8,12 @@ import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import static calculator.domain.ParsingConstants.CUSTOM_DELIMITER_PREFIX;
-import static calculator.domain.ParsingConstants.CUSTOM_DELIMITER_SUFFIX;
-
 public class Delimiters {
     private static final String BASIC_DELIMITER_COMMA = ",";
     private static final String BASIC_DELIMITER_COLON = ":";
 
-    private final Set<String> delimiters = new HashSet<>(List.of(BASIC_DELIMITER_COMMA, BASIC_DELIMITER_COLON));
+    private final Set<String> delimiters =
+            new HashSet<>(List.of(BASIC_DELIMITER_COMMA, BASIC_DELIMITER_COLON));
     private final String inputText;
 
 
@@ -26,7 +24,7 @@ public class Delimiters {
 
     public static Delimiters createDelimiters(String inputText) {
         Delimiters delimiters = new Delimiters(inputText);
-        if (inputText.startsWith(CUSTOM_DELIMITER_PREFIX)) {
+        if (inputText.startsWith(ParsingConstants.CUSTOM_DELIMITER_PREFIX)) {
             delimiters.setCustomDelimiter();
         }
         return delimiters;
@@ -40,8 +38,8 @@ public class Delimiters {
     }
 
     private String extractCustomDelimiter() {
-        int startIndex = CUSTOM_DELIMITER_PREFIX.length();
-        int suffixIndex = inputText.indexOf(CUSTOM_DELIMITER_SUFFIX);
+        int startIndex = ParsingConstants.CUSTOM_DELIMITER_PREFIX.length();
+        int suffixIndex = inputText.indexOf(ParsingConstants.CUSTOM_DELIMITER_SUFFIX);
         return inputText.substring(startIndex, suffixIndex);
     }
 

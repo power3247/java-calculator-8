@@ -1,9 +1,8 @@
 package calculator.validator;
 
-import java.util.List;
+import calculator.domain.ParsingConstants;
 
-import static calculator.domain.ParsingConstants.CUSTOM_DELIMITER_PREFIX;
-import static calculator.domain.ParsingConstants.CUSTOM_DELIMITER_SUFFIX;
+import java.util.List;
 
 public class Validator {
 
@@ -33,7 +32,8 @@ public class Validator {
     }
 
     public static void validateCustomDelimiterFormat(String inputText) {
-        if (inputText.startsWith(CUSTOM_DELIMITER_PREFIX) && !inputText.contains(CUSTOM_DELIMITER_SUFFIX)) {
+        if (inputText.startsWith(ParsingConstants.CUSTOM_DELIMITER_PREFIX)
+                && !inputText.contains(ParsingConstants.CUSTOM_DELIMITER_SUFFIX)) {
             throw new IllegalArgumentException("커스텀 구분자 형식 오류: '//' 다음에는 '\\n'이 와야 합니다.");
         }
     }
