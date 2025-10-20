@@ -22,6 +22,7 @@ public class StringCalculator {
         String regex = delimiters.getRegex();
         return extractedNumbersText.split(regex);
     }
+
     private String extractNumbersText(String inputText) {
         if (inputText.startsWith(CUSTOM_DELIMITER_PREFIX)) {
             int suffixIndex = inputText.indexOf(CUSTOM_DELIMITER_SUFFIX);
@@ -29,12 +30,14 @@ public class StringCalculator {
         }
         return inputText;
     }
+
     private List<Integer> parseNumbers(String[] stringNumbers) {
         List<Integer> numbers = Arrays.stream(stringNumbers)
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
         return numbers;
     }
+
     private int sum(List<Integer> numbers) {
         return numbers.stream().mapToInt(Integer::intValue).sum();
     }
