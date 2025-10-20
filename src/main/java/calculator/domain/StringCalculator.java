@@ -36,10 +36,9 @@ public class StringCalculator {
     }
 
     private List<Integer> parseNumbers(String[] stringNumbers) {
-        List<Integer> numbers = Arrays.stream(stringNumbers)
+        return Arrays.stream(stringNumbers)
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
-        return numbers;
     }
 
     private int sum(List<Integer> numbers) {
