@@ -2,6 +2,8 @@ package calculator.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class Delimiters {
     private static final String CUSTOM_DELIMITER_PREFIX = "//";
@@ -36,6 +38,6 @@ public class Delimiters {
     }
 
     public String getRegex() {
-        return "";
+        return delimiters.stream().map(Pattern::quote).collect(Collectors.joining("|"));
     }
 }
