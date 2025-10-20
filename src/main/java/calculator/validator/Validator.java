@@ -2,7 +2,8 @@ package calculator.validator;
 
 import java.util.List;
 
-import static calculator.domain.ParsingConstants.*;
+import static calculator.domain.ParsingConstants.CUSTOM_DELIMITER_PREFIX;
+import static calculator.domain.ParsingConstants.CUSTOM_DELIMITER_SUFFIX;
 
 public class Validator {
 

@@ -1,13 +1,15 @@
 package calculator.domain;
 
 import calculator.validator.Validator;
-import static calculator.domain.ParsingConstants.*;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class StringCalculator { 
+import static calculator.domain.ParsingConstants.CUSTOM_DELIMITER_PREFIX;
+import static calculator.domain.ParsingConstants.CUSTOM_DELIMITER_SUFFIX;
+
+public class StringCalculator {
 
     public int add(String inputText) {
         Validator.validateInputTextEmpty(inputText);
