@@ -28,7 +28,9 @@ public class Delimiters {
     }
 
     private String extractCustomDelimiter() {
-        return "";
+        int startIndex = CUSTOM_DELIMITER_PREFIX.length();
+        int suffixIndex = inputText.indexOf(CUSTOM_DELIMITER_SUFFIX);
+        return inputText.substring(startIndex, suffixIndex);
     }
 
     public String getRegex() {
