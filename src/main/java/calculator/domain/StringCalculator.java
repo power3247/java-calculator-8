@@ -1,6 +1,8 @@
 package calculator.domain;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StringCalculator {
     private static final String CUSTOM_DELIMITER_PREFIX = "//";
@@ -28,7 +30,10 @@ public class StringCalculator {
         return inputText;
     }
     private List<Integer> parseNumbers(String[] stringNumbers) {
-        return null;
+        List<Integer> numbers = Arrays.stream(stringNumbers)
+                .map(Integer::parseInt)
+                .collect(Collectors.toList());
+        return numbers;
     }
 
     private int sum(List<Integer> numbers) {
